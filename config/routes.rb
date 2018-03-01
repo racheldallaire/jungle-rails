@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   root to: 'home#index'
 
+  get '/register' => 'users#new'
+
   resources :products, only: [:index, :show]
   resources :categories, only: [:show]
   resources :register, only: [:index, :show]
