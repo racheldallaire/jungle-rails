@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
 
-  root to: 'products#index'
+  get 'home/index'
+
+  root to: 'home#index'
 
   resources :products, only: [:index, :show]
   resources :categories, only: [:show]
+  resources :register, only: [:index, :show]
 
   resource :cart, only: [:show] do
     put    :add_item
