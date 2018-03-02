@@ -2,6 +2,7 @@ class OrdersController < ApplicationController
 
   def show
     @order = Order.find(params[:id])
+    @email = params[:stripeEmail]
   end
 
   def create
@@ -12,6 +13,8 @@ class OrdersController < ApplicationController
       empty_cart!
       flash[:success] = 'Your order has been placed. Thank you!'
       redirect_to order
+      # Tell the UserMailer to send an email receipt after purchase
+      UserMailer.email(order).deliver_later
     else
       redirect_to cart_path, flash[:danger] = { error: order.errors.full_messages.first }
     end
