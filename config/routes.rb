@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root to: 'home#index'
 
   get '/register' => 'users#new'
+  post '/register' => 'users#create'
 
   resources :products, only: [:index, :show]
   resources :categories, only: [:show]
