@@ -1,3 +1,4 @@
+<% if cart.count != 0 %>
 <section class="cart-show">
 
   <header class="page-header">
@@ -50,3 +51,10 @@
   </div>
 
 </section>
+<% else %>
+
+<% flash.now[:danger] = 'Your cart is currently empty.' %>
+<%= link_to 'Continue Shopping', products_path %>
+
+<% end %>
+
