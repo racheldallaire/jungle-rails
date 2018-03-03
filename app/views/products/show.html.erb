@@ -24,8 +24,16 @@
           <dd><%= @product.price %></dd>
         </dl>
       </div>
-    </div>
 
-  </article>
+    <% if @reviews.count != 0 %>
+    <h3 align='center'> Reviews </h3>
+    <%= render partial: "review", locals:{reviews: @reviews} %>
+    <% else %>
+    <h3 align='center'> Reviews </h3>
+    <h5 align='center'>No reviews yet. </h5>
+
+  <% end %>
+   </div>
+ </article>
 
 </section>

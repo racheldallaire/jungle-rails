@@ -132,5 +132,25 @@ cat3.products.create!({
   price: 2_483.75
 })
 
+Review.create!(
+  user_id: 1,
+  product_id: 11,
+  description: 'And to think the electric chair used to be considered a BAD thing!',
+  rating: 5
+  )
+
+Review.create!(
+  user_id: 1,
+  product_id: 10,
+  description: 'Was NOT an optimal sleeping experience.',
+  rating: 1
+  )
+
+Review.create!(
+  user_id: 1,
+  product_id: 4,
+  description: 'At the end of the day, they are just socks.',
+  rating: 3
+  )
 
 puts "DONE!"
