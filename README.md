@@ -1,9 +1,22 @@
-# Jungle
+# :monkey: Jungle
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+A mini e-commerce application built with Rails 4.2.
 
+## Final Product
 
-## Setup
+![Screenshot of register functionality](https://github.com/racheldallaire/jungle-rails/blob/master/docs/register.gif)
+
+Upon registration, users are automatically logged in and linked to existing Gravar accounts. They are then redirected to their profile page and may start shopping.
+
+![Screenshot of checkout](https://github.com/racheldallaire/jungle-rails/blob/master/docs/checkout.gif)
+
+App uses stripe to checkout purchases, and a confirmation is sent to the user-inputted email. Users are then redirected to a page confirming their order.
+
+![Screenshot of prodcut reviews](https://github.com/racheldallaire/jungle-rails/blob/master/docs/review.gif)
+
+Logged-in users can leave reviews of products. If a user is not logged-in, this functionality is not available.
+
+## Project Setup
 
 1. Fork & Clone
 2. Run `bundle install` to install dependencies
