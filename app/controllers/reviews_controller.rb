@@ -4,6 +4,7 @@ class ReviewsController < ApplicationController
     rating = params[:review][:rating]
     review = params[:review][:description]
     reviewer = session[:user_id]
+    @review.user = current_user
 
     new_review = Review.new({product_id: product_id, user_id: reviewer, rating: rating, description: review})
 
